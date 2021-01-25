@@ -38,9 +38,6 @@ void setup()
   pinMode(s2, OUTPUT);  
   pinMode(s3, OUTPUT);  
   pinMode(out, INPUT);  
-  pinMode(redLed, OUTPUT);  
-  pinMode(greenLed, OUTPUT);  
-  pinMode(blueLed, OUTPUT);  
   digitalWrite(s0, HIGH);  
   digitalWrite(s1, HIGH);  
   
@@ -63,7 +60,7 @@ void loop()
   Serial.println();  
 
   // Se van comparando las intensitades obtenidas para determinar el color que se esta sensando
-  // Luego se muestra en la consola de arduino el color que se esta detectando con el sensor.
+  // Luego se muestra en la consola del IDE de arduino el color que se esta detectando con el sensor.
   if ((green > red) && (green > blue) && ((green > 20) && (green < 50)))
   {  
    Serial.println("Detectando color: ROJO");  
